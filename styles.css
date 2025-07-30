@@ -1,1 +1,51 @@
 /*  your css code here. If applicable */
+Here's a JavaScript code that meets the requirements:
+
+
+class Animal {
+    constructor(species) {
+        this._species = species;
+    }
+
+    get species() {
+        return this._species;
+    }
+
+    makeSound() {
+        console.log(`The ${this.species} makes a sound`);
+    }
+}
+
+class Cat extends Animal {
+    constructor(species) {
+        super(species);
+    }
+
+    purr() {
+        console.log("purr");
+    }
+}
+
+class Dog extends Animal {
+    constructor(species) {
+        super(species);
+    }
+
+    bark() {
+        console.log("woof");
+    }
+}
+
+// Test the code
+const myCat = new Cat("Siamese");
+myCat.makeSound(); 
+myCat.purr();
+
+const myDog = new Dog("Golden Retriever");
+myDog.makeSound();
+myDog.bark();
+
+
+This code defines the Animal class with a constructor that takes a species parameter and a makeSound method that logs a message to the console. The Cat and Dog classes extend the Animal class and add their specific behaviors (purr and bark methods, respectively). The species getter is also implemented in the Animal class to return the species name.
+
+When you run this code, it creates instances of Cat and Dog and calls their methods to demonstrate the expected behavior. The output should match the expected output specified in the problem statement.
